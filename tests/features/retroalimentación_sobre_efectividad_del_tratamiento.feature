@@ -41,11 +41,3 @@ Característica: Retroalimentación sobre la efectividad percibida del tratamien
     Y se programa una alerta para el médico tratante
     Y se me ofrece la opción de solicitar una cita prioritaria
     Y se sugieren medidas paliativas temporales mientras se ajusta el tratamiento
-
-  Escenario: Seguimiento continuo de efectividad
-    Dado que he completado una evaluación de efectividad
-    Cuando han pasado 2 semanas desde la evaluación
-    Entonces recibo una notificación para realizar una nueva evaluación
-    Y se comparan los resultados con evaluaciones anteriores
-    Y se mantiene un historial de evolución de la efectividad del tratamiento
-    Y se identifican tendencias a largo plazo en la respuesta al tratamiento

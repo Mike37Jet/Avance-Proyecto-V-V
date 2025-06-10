@@ -13,7 +13,7 @@ Característica: Evaluación de la severidad de los síntomas
     Dado que el paciente tiene registros con severidad promedio de <Severidad promedio> en escala de 1-10
     Y el <Porcentaje> por ciento de los episodios son de severidad alta (7-10)
     Cuando accedo al análisis de severidad del paciente
-    Entonces se muestra un dashboard con métricas de severidad
+    Entonces se muestra información con métricas de severidad
     Y se categoriza el paciente como <Categoría de riesgo>
     Y se generan <Número de recomendaciones> recomendaciones específicas de tratamiento
     Y se actualiza automáticamente el perfil de riesgo del paciente

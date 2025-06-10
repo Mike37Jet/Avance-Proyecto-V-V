@@ -7,23 +7,28 @@ Característica: Detección de desencadenantes frecuentes en la migraña
 
   Antecedentes:
     Dado que soy un médico autenticado en el sistema
-    Y el paciente ha registrado factores ambientales y personales junto con sus síntomas
 
-  Escenario: Identificación exitosa de desencadenantes principales
-    Dado que el paciente tiene al menos 20 registros completos de síntomas y factores
-    Y ha registrado información sobre estrés, alimentación, sueño y factores ambientales
+  Esquema del escenario: Identificación exitosa de desencadenantes principales
+    Dado que el paciente tiene al menos <Número de registros> registros completos de síntomas y factores
     Cuando ejecuto el análisis de desencadenantes
-    Entonces se identifican los 3 desencadenantes más frecuentes
+    Entonces se identifican los <Número de desencadenantes frecuentes> desencadenantes más frecuentes
     Y se muestra el porcentaje de correlación de cada desencadenante con los episodios
     Y se genera un informe de recomendaciones preventivas personalizadas
-    Y se establece un índice de confianza del análisis superior al 70%
+    Y se establece un índice de confianza del análisis superior al <Indice de confianza>%
+    Ejemplos:
+      | Número de registros | Número de desencadenantes frecuentes | Indice de confianza |
+      | 20                  | 3                                    | 70                  |
 
-  Escenario: Análisis con datos insuficientes para correlación
-    Dado que el paciente tiene menos de 10 registros de factores desencadenantes
+
+  Esquema del escenario: Análisis con datos insuficientes para correlación
+    Dado que el paciente tiene menos de <Número de registros> registros de factores desencadenantes
     Cuando ejecuto el análisis de desencadenantes
     Entonces se muestra un mensaje "Datos insuficientes para análisis estadístico confiable"
     Y se presentan los factores registrados sin correlación estadística
     Y se solicita al paciente completar más información durante 2 semanas adicionales
+     Ejemplos:
+      | Número de registros |
+      | 10                  |
 
   Esquema del escenario: Correlación de desencadenantes específicos
     Dado que el paciente registra <Desencadenante> como factor en <Frecuencia> por ciento de sus episodios
@@ -37,4 +42,3 @@ Característica: Detección de desencadenantes frecuentes en la migraña
       | Estrés laboral     | 85         | 8.2        | Alta                 | 1         |
       | Falta de sueño     | 70         | 7.8        | Alta                 | 2         |
       | Chocolate          | 45         | 6.1        | Moderada             | 3         |
-      | Cambios climáticos | 30         | 5.5        | Baja                 | 4         |

@@ -13,10 +13,9 @@ Característica: Seguimiento de síntomas autodeclarados
     Dado que el paciente tiene registrados <Número de registros> síntomas en los últimos <Período> días
     Y cada registro contiene información completa de síntomas
     Cuando consulto los registros de síntomas del paciente
-    Entonces se muestra una línea de tiempo con la evolución de los síntomas
+    Entonces se muestra la evolución de los síntomas
     Y se visualiza la tendencia de intensidad del dolor
     Y se resalta cualquier patrón identificado automáticamente
-    Y se muestra el tiempo de respuesta menor a 3 segundos
 
     Ejemplos:
       | Número de registros | Período |

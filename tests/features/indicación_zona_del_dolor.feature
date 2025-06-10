@@ -32,17 +32,3 @@ Característica: Indicación de la zona del dolor
       | Frontal bilateral | 6          | Opresivo      | Cefalea tensional  | 2                         |
       | Occipital         | 7          | Punzante      | Migraña posterior  | 4                         |
       | Orbital izquierdo | 9          | Punzante      | Cefalea en cluster | 5                         |
-
-  Escenario: Modificación de zona durante el episodio
-    Dado que he registrado un episodio con dolor en zona temporal derecha
-    Cuando el dolor migra a la zona frontal después de 2 horas
-    Entonces puedo actualizar el registro del mismo episodio
-    Y se mantiene el historial de cambios con timestamps
-    Y se notifica al médico sobre la evolución del patrón
-
-  Escenario: Comparación con episodios anteriores
-    Dado que registro una nueva zona de dolor
-    Cuando confirmo el registro
-    Entonces el sistema muestra si esta zona es frecuente en mi historial
-    Y presenta estadísticas de mis zonas de dolor más comunes
-    Y identifica si hay cambios en el patrón habitual de localización

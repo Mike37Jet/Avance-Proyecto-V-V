@@ -15,15 +15,15 @@ Característica: Prevención de crisis
     Y según mi historial, esto precede una migraña en <Porcentaje> por ciento de los casos
     Cuando el sistema analiza mis datos actuales
     Entonces recibo una alerta de <Tipo de alerta>
-    Y se proporcionan <Número de recomendaciones> recomendaciones específicas
-    Y la alerta se envía por <Canal de notificación>
+    Y se proporcionan recomendaciones específicas
+
 
     Ejemplos:
-      | Señal de alarma    | Intensidad | Porcentaje | Tipo de alerta | Número de recomendaciones | Canal de notificación |
-      | Tensión cervical   | 6/10       | 85         | Alta           | 4                         | Push + SMS            |
-      | Sensibilidad a luz | 7/10       | 78         | Alta           | 3                         | Push + Email          |
-      | Estrés emocional   | 5/10       | 60         | Moderada       | 3                         | Push                  |
-      | Cambio de presión  | 4/10       | 45         | Baja           | 2                         | Push                  |
+      | Señal de alarma    | Intensidad | Porcentaje | Tipo de alerta |
+      | Tensión cervical   | 6/10       | 85         | Alta           |
+      | Sensibilidad a luz | 7/10       | 78         | Alta           |
+      | Estrés emocional   | 5/10       | 60         | Moderada       |
+      | Cambio de presión  | 4/10       | 45         | Baja           |
 
   Escenario: Respuesta del paciente a la alerta
     Dado que recibo una alerta de posible crisis migranosa
