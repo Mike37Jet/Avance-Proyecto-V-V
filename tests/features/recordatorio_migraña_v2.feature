@@ -2,9 +2,12 @@
 # language: es
 
 Característica: Recordatorio de tratamiento para la migraña
-  Como paciente con migraña,
+  #todo mejorar este nombre de característica
+  Como paciente con tratamiento para la migraña,
   Quiero recibir recordatorios en base a mi tratamiento,
-  Para minimizar interrupciones en mi vida diaria
+  #Para minimizar interrupciones en mi vida diaria
+  #Para cumplir con mi tratamiento de manera efectiva
+  Para cumplir con mi tratamiento y mininizar interrupciones en mi vida diaria
 
   Esquema del escenario: Recordar toma de medicamentos
     Dado que el paciente tiene una medicina prescrita para la migraña
@@ -26,6 +29,8 @@ Característica: Recordatorio de tratamiento para la migraña
       | horas |
       | 9     |
       | 18    |
-
-
+    # Identificar el valor
+    # Agregar un estado a la notificacion
+    # Confirmacion del tratamiento
+    #
 
