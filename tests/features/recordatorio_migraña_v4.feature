@@ -21,21 +21,23 @@ Característica: Aseguramiento del tratamiento para la migraña
     Dado que el paciente ha recibido una alerta para tomar su medicación
     Y la hora actual es la hora programada para la toma
     Cuando el paciente confirma que ha tomado la medicación
-    Entonces se actualizará el estado del recordatorio a "tomado"
+    Entonces se actualizará el estado de la alarma a "tomado"
 
   Escenario: Confirmación de olvido de toma de medicamentos
     Dado que el paciente ha recibido una alerta para tomar su medicación
     Y la hora actual es la hora programada para la toma
     Cuando el paciente confirma que no ha tomado la medicación
-    Entonces se actualizará el estado del recordatorio a "no tomado"
+    Entonces se actualizará el estado de la alarma a "no tomado"
     Y se enviará una notificación al paciente sugiriendo que tome su medicación
 
-  Escenario: Paciente olvida confirmar la alerta de medicación
+  Escenario: Olvido de confirmar la alerta para la toma de medicamentos
     Dado que el paciente ha recibido una alerta para tomar su medicación
     Y la hora actual es la hora programada para la toma
     Cuando transcurran 30 minutos sin que el paciente confirme la toma
-    Entonces se actualizará el estado del recordatorio a "sin confirmar"
-    Y se enviará una notificación recordatoria al paciente
+    Entonces se enviará una segunda alerta
+    Y se programará una tercera alerta 15 minutos después de la segunda
+    Y si no se confirma ninguna de las 3 alertas, se actualizará el estado de la alerta a "sin confirmar"
+
 
   Esquema del escenario: Recordatorio de recomendación de tratamiento
     Dado que el paciente tiene una recomendación de tratamiento para la migraña
