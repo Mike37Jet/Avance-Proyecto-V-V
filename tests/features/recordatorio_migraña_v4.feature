@@ -30,7 +30,7 @@ Característica: Aseguramiento del tratamiento para la migraña
     Entonces se actualizará el estado de la alarma a "no tomado"
     Y se enviará una notificación al paciente sugiriendo que tome su medicación
 
-  Escenario: Olvido de confirmar la alerta para la toma de medicamentos
+  Escenario: Omisión de confirmación de toma de medicamentos
     Dado que el paciente ha recibido una alerta para tomar su medicación
     Y la hora actual es la hora programada para la toma
     Cuando transcurran 30 minutos sin que el paciente confirme la toma
