@@ -30,7 +30,12 @@ Característica: Aseguramiento del tratamiento para la migraña
     Entonces se actualizará el estado del recordatorio a "no tomado"
     Y se enviará una notificación al paciente sugiriendo que tome su medicación
 
-    #todo: escenario olvidado
+  Escenario: Paciente olvida confirmar la alerta de medicación
+    Dado que el paciente ha recibido una alerta para tomar su medicación
+    Y la hora actual es la hora programada para la toma
+    Cuando transcurran 30 minutos sin que el paciente confirme la toma
+    Entonces se actualizará el estado del recordatorio a "sin confirmar"
+    Y se enviará una notificación recordatoria al paciente
 
   Esquema del escenario: Recordatorio de recomendación de tratamiento
     Dado que el paciente tiene una recomendación de tratamiento para la migraña
