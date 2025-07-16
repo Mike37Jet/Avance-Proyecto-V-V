@@ -1,0 +1,23 @@
+@startuml
+'Diagrama de estados para recordatorios de recomendaciones
+
+scale 400 width
+[*] --> Inactivo
+
+state Inactivo {
+}
+
+Inactivo --> RecordatorioActivo : 9:00 AM
+
+state RecordatorioActivo {
+  [*] --> NotificacionEnviada
+  NotificacionEnviada --> Finalizado : Recordatorio enviado
+}
+
+state Finalizado {
+
+}
+
+Finalizado --> [*]
+
+@enduml

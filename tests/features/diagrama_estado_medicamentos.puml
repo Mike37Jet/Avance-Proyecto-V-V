@@ -1,0 +1,34 @@
+@startuml
+'Diagrama de estados para recordatorios de medicamentos
+
+scale 400 width
+[*] --> RecordatorioActivo : 30 min antes de la toma
+
+state RecordatorioActivo {
+  [*] --> NotificacionEnviada
+}
+
+NotificacionEnviada --> AlertaActiva : esperar 30 min
+
+state AlertaActiva {
+  [*] --> EsperandoConfirmacion
+  EsperandoConfirmacion --> Tomado : Paciente confirma toma
+  EsperandoConfirmacion --> NoTomado : Paciente confirma no toma
+  EsperandoConfirmacion --> SinConfirmar : 30 min sin respuesta
+}
+
+state Tomado {
+}
+
+state NoTomado {
+}
+
+state SinConfirmar {
+
+}
+
+Tomado --> [*]
+NoTomado --> [*]
+SinConfirmar --> [*]
+
+@enduml

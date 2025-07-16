@@ -1,0 +1,80 @@
+@startuml:
+
+package "Seguimiento de Tratamiento de Migraña" {
+    class Medicación {
+    - nombre
+    - dosis
+    - frecuencia
+    - duracion
+    + get_hora_proxima_toma()
+    + notificar()
+}
+
+class Recomendación {
+    - descripción
+    + get_hora_proximaRecomendación()
+    + notificar()
+}
+
+class Tratamiento {
+    - List<Medicación> medicinas
+    - List<Recomendación> recomendaciones
+    + agregarMedicina()
+    + agregarRecomendatorio()
+    + obtenerSiguienteMedicina()
+    + obtenerSIguienteRecomendacion()
+    + verificar_recordatorios()
+}
+
+class Paciente {
+    - nombre
+    - edad
+    - genero
+    + confirmar()
+    + confirmar_no()
+}
+
+}
+
+package "Aseguramiento de Tratamiento"{
+class Recordatorio {
+    + enviar()
+}
+
+class Alarma {
+    - duración
+    + enviar()
+    + desactivar()
+    + reprogramar()
+}
+
+interface Notificación {
+    + enviar()
+    + desactivar()
+}
+
+abstract NotificaciónDecorador {
+    - estado
+    - contenido
+    + enviar()
+    + desactivar()
+}
+
+
+}
+
+
+Tratamiento --> "1..*" Medicación : tiene
+Tratamiento --> "1..*" Recomendación : tiene
+Paciente --> Tratamiento
+
+
+NotificaciónDecorador <|-- Alarma
+NotificaciónDecorador <|-- Recordatorio
+Notificación <--o NotificaciónDecorador
+Notificación <|-- NotificaciónDecorador
+
+Medicación --> Notificación : notifica
+Recomendación --> Notificación : notifica
+
+@enduml
