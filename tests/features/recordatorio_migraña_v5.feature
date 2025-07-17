@@ -62,13 +62,13 @@ Característica: Aseguramiento del tratamiento para la migraña
     Y la hora actual es <tiempo_transcurrido> minutos después de la hora programada para la toma
     Cuando transcurran 15 minutos sin que el paciente confirme la toma
     Entonces se actualizará el estado de la alerta a "sin confirmar"
-    Y <accion_siguiente>
+    Y se enviará una <accion_siguiente> alerta
 
     Ejemplos:
-      | numero_alerta | tiempo_transcurrido | accion_siguiente              |
-      | primera       | 0                   | se enviará una segunda alerta |
-      | segunda       | 30                  | se enviará una tercera alerta |
-      | tercera       | 45                  | no se enviará más alertas     |
+      | numero_alerta | tiempo_transcurrido | accion_siguiente |
+      | primera       | 0                   | segunda          |
+      | segunda       | 30                  | tercera          |
+      | tercera       | 45                  | ninguna          |
 
   Esquema del escenario: Alerta de toma de medicamentos confirmada
     Dado que el paciente ha recibido una <numero_alerta> alerta para tomar su medicación
