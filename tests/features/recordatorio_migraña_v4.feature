@@ -1,4 +1,4 @@
-# Created by Escobar Alex, Haro Rodrigo, Jacome Emilio, Mendosa Miguel at 6/7/2025
+# Created by Escobar Alex, Haro Rodrigo, Jacome Emilio, Mendosa Miguel at 13/7/2025
 # language: es
 
 Característica: Aseguramiento del tratamiento para la migraña
@@ -12,6 +12,7 @@ Característica: Aseguramiento del tratamiento para la migraña
     Y una duración de <dias> días
     Cuando la hora actual sea <minutos_antes> minutos antes de la hora de la toma
     Entonces se enviará un recordatorio al paciente indicando que debe tomar su medicación pronto
+    Y el estado de la notificación será "activa"
 
     Ejemplos:
       | frecuencia | dias | minutos_antes |
@@ -43,6 +44,7 @@ Característica: Aseguramiento del tratamiento para la migraña
     Dado que el paciente tiene una recomendación de tratamiento para la migraña
     Cuando sea las <horas> del día
     Entonces se notificará mediante un recordatorio sugiriendole seguir esta recomendación
+    Y el estado de la notificación será "activa"
 
     Ejemplos:
       | horas |
