@@ -4,6 +4,7 @@ package "Seguimiento de Tratamiento de Migraña" {
     class Medicación {
     - nombre
     - dosis
+    - cantidad
     - frecuencia
     - duracion
     + get_hora_proxima_toma()
